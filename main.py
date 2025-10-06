@@ -41,6 +41,8 @@ blob = Blob()
 DOC_FOLDER = os.environ.get("DOCUMENT_FOLDER", "documents")
 CHAT_IMG_FOLDER = os.environ.get("CHAT_IMG_FOLDER", "chat_images")
 IMAGE_FOLDER = os.environ.get("IMAGE_FOLDER", "images")
+LOG_FOLDER = os.environ.get("LOG_FOLDER", "logs")
+LOG_FILE = os.environ.get("LOG_FILE", "")
 os.makedirs(DOC_FOLDER, exist_ok=True)
 os.makedirs(CHAT_IMG_FOLDER, exist_ok=True)
 os.makedirs(IMAGE_FOLDER, exist_ok=True)
@@ -60,6 +62,11 @@ ALLOWED_EXTENSIONS = {".pdf", ".png"}
 # scheduler = BackgroundScheduler()
 # scheduler.add_job(run_message_insertion, 'cron', hour=5, minute=12)  # Runs every day at 2:00 AM
 # scheduler.start()
+
+# Root URL
+@app.get("/")
+def read_root():
+    return {"message": "API is running!"}
 
 # 1) POST - upload document
 @app.post("/upload-document")
@@ -221,17 +228,138 @@ async def get_file(filename: str, inline: bool = False):
 
 @app.post("/authenticate")
 async def authenticate_endpoint(username: str = Form(...), password: str = Form(...)):
-    user: dict | None  = db.authenticate_user(username=username, password=password)
+    log.log_event("SYSTEM", "[MAIN] /authenticate_endpoint called")
+    try:
+        user: dict | None  = db.authenticate_user(username=username, password=password)
+        
+        if user:
+            log.log_event("SYSTEM", "[MAIN] /authenticate_endpoint returned - status(200)")
+            return JSONResponse(
+                status_code=200,
+                content={
+                    "message": "User authentication successful",
+                    "userID": user.get("user_id"),
+                    "role": user.get("role"),
+                }
+            )
+        else:
+            log.log_event("SYSTEM", "[MAIN] /authenticate_endpoint returned - status(401)")
+            return JSONResponse(
+                status_code=401,
+                content={
+                    "message": "User ID or password incorrect",
+                    "username": username,
+                }
+            )
+    except Exception as excp:
+        log.log_event("SYSTEM", "[MAIN] /authenticate_endpoint returned - status(500)")
+        return JSONResponse(
+            status_code=500,
+            content={
+                "message": "Failed to authenticate",
+                "exception": excp
+            }
+        )
+
+@app.post("/deactivate-user")
+async def deactivate_user_endpoint(userID: int = Form(...)):
+    log.log_event("SYSTEM", "[MAIN] /deactivate_user_endpoint called")
+    try:
+        user = db.deactivate_user(user_id=userID)
+
+        if user:
+            log.log_event("SYSTEM", "[MAIN] /deactivate_user_endpoint returned - status(200)")
+            return JSONResponse(
+                status_code=200,
+                content={
+                    "message": "User deactivated successfully",
+                    "userID": userID,
+                }
+            )
+        else:
+            log.log_event("SYSTEM", "[MAIN] /deactivate_user_endpoint returned - status(404)")
+            return JSONResponse(
+                status_code=404,
+                content={
+                    "message": "User not found",
+                    "userID": userID
+                }
+            )
+    except Exception as excp:
+        log.log_event("SYSTEM", "[MAIN] /deactivate_user_endpoint returned - status(500)")
+        return JSONResponse(
+            status_code=500,
+            content={
+                "message": f"Failed to deactivate user: {userID}",
+                "exception": excp
+            }
+        )
     
-    if user:
-        return {
-            "status": "200 OK",
-            "userID": user.get("user_id"),
-            "role": user.get("role"),
-        }
-    else:
-        return {
-            "status": "401 UNAUTHORIZED",
-            "userID": None,
-            "role": None,
-        }
+@app.post("/activate-user")
+async def activate_user_endpoint(userID: int = Form(...)):
+    log.log_event("SYSTEM", "[MAIN] /activate_user_endpoint called")
+    try:
+        user = db.activate_user(user_id=userID)
+
+        if user:
+            log.log_event("SYSTEM", "[MAIN] /activate_user_endpoint returned - status(200)")
+            return JSONResponse(
+                status_code=200,
+                content={
+                    "message": "User activated successfully",
+                    "userID": userID,
+                }
+            )
+        else:
+            log.log_event("SYSTEM", "[MAIN] /activate_user_endpoint returned - status(404)")
+            return JSONResponse(
+                status_code=404,
+                content={
+                    "message": "User not found",
+                    "userID": userID
+                }
+            )
+    except Exception as excp:
+        log.log_event("SYSTEM", "[MAIN] /activate_user_endpoint returned - status(500)")
+        return JSONResponse(
+            status_code=500,
+            content={
+                "message": f"Failed to activate user: {userID}",
+                "exception": excp
+            }
+        )
+    
+@app.get("/refresh-logs")
+async def refresh_logs_endpoint():
+    log.log_event("SYSTEM", "[MAIN] /refresh_logs_endpoint called")
+    try:
+        log_file = blob.upload_file(blob.authenticate(), file_path=os.path.join(LOG_FOLDER, LOG_FILE), folder_name="Logs")
+
+        if log_file:
+            log.log_event("SYSTEM", "[MAIN] /refresh_logs_endpoint returned - status(200)")
+            return JSONResponse(
+                status_code=200,
+                content={
+                    "message": "Logs have been refreshed",
+                    "file_name": log_file.get("name"),
+                    "file_id": log_file.get("id"),
+                    "file_link": log_file.get("webViewLink")
+                }
+            )
+        else:
+            log.log_event("SYSTEM", "[MAIN] /refresh_logs_endpoint returned - status(500)")
+            return JSONResponse(
+                status_code=500,
+                content={
+                    "message": "Failed to refresh logs"
+                }
+            )
+    except Exception as excp:
+        log.log_event("SYSTEM", "[MAIN] /refresh_logs_endpoint returned - status(500)")
+        return JSONResponse(
+            status_code=500,
+            content={
+                "message": "Failed to refresh logs",
+                "exception": excp
+            }
+        )
