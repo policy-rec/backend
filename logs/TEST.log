@@ -1,0 +1,353 @@
+[2025-10-03 13:03:01 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB failed. No module named 'psycopg2'
+[2025-10-03 13:07:55 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-03 13:09:22 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-03 13:09:23 GMT+5:00] | [SYSTEM]: [DATABASE] New user created.
+[2025-10-03 13:09:25 GMT+5:00] | [SYSTEM]: [DATABASE] New user created.
+[2025-10-03 13:10:33 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-03 13:10:33 GMT+5:00] | [SYSTEM]: [DATABASE] User authentication failed. unsupported operand type(s) for -: 'str' and 'str'
+[2025-10-03 13:11:47 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-03 13:11:49 GMT+5:00] | [SYSTEM]: [DATABASE] User:taha.moiz authentication successful.
+[2025-10-03 13:12:15 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-03 13:12:16 GMT+5:00] | [SYSTEM]: [DATABASE] User:taha.moiz authentication successful.
+[2025-10-03 13:14:35 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-03 13:14:37 GMT+5:00] | [SYSTEM]: [DATABASE] User:sahir.mansoor authentication successful.
+[2025-10-03 13:15:41 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-03 13:15:43 GMT+5:00] | [SYSTEM]: [DATABASE] New user created.
+[2025-10-03 13:16:15 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-03 13:16:17 GMT+5:00] | [SYSTEM]: [DATABASE] User:ali.zain authentication successful.
+[2025-10-03 14:51:07 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-03 14:51:08 GMT+5:00] | [SYSTEM]: [DATABASE] User deactivation failed. 'User' object has no attribute '_DBHandler__deactivate_user'
+[2025-10-03 14:51:44 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-03 14:51:44 GMT+5:00] | [SYSTEM]: [DATABASE] User deactivation failed. 'User' object has no attribute '_DBHandler__deactivate_user'
+[2025-10-03 14:53:19 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-03 14:53:58 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-03 14:55:01 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-03 14:56:03 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-03 14:57:19 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-03 14:57:20 GMT+5:00] | [SYSTEM]: [DATABASE] User deactivation successful.
+[2025-10-03 15:01:07 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-03 15:01:08 GMT+5:00] | [SYSTEM]: [DATABASE] User:3 does not exist.
+[2025-10-03 15:01:46 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-03 15:01:47 GMT+5:00] | [SYSTEM]: [DATABASE] User:3 does not exist.
+[2025-10-03 15:02:44 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-03 15:02:44 GMT+5:00] | [SYSTEM]: [DATABASE] User activation successful.
+[2025-10-03 15:02:57 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-03 15:02:58 GMT+5:00] | [SYSTEM]: [DATABASE] User deactivation successful.
+[2025-10-03 15:03:11 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-03 15:03:12 GMT+5:00] | [SYSTEM]: [DATABASE] User:ali.zain authentication denied.
+[2025-10-03 15:23:14 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-03 15:23:14 GMT+5:00] | [SYSTEM]: [DATABASE] All information retrieval successful.
+[2025-10-03 18:34:05 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-03 18:34:05 GMT+5:00] | [SYSTEM]: [DATABASE] Chat creation failed. 'chat_name' is an invalid keyword argument for Chat
+[2025-10-03 18:36:10 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-03 18:36:11 GMT+5:00] | [SYSTEM]: [DATABASE] New chat created.
+[2025-10-03 18:37:05 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-03 18:42:03 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-03 18:42:32 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-03 18:42:34 GMT+5:00] | [SYSTEM]: [DATABASE] Added Hello!!... to chat: 1
+[2025-10-03 18:44:35 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-03 18:44:37 GMT+5:00] | [SYSTEM]: [DATABASE] New chat created.
+[2025-10-03 19:14:48 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-03 19:14:50 GMT+5:00] | [SYSTEM]: [DATABASE] Added WASSUP... to chat: 2
+[2025-10-03 19:15:35 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-03 19:15:36 GMT+5:00] | [SYSTEM]: [DATABASE] New chat created.
+[2025-10-03 19:15:38 GMT+5:00] | [SYSTEM]: [DATABASE] Added WASSUP... to chat: 3
+[2025-10-03 19:16:23 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-03 19:16:24 GMT+5:00] | [SYSTEM]: [DATABASE] Chat messages retrieval failed. 'ChatMessage' object has no attribute 'message'
+[2025-10-03 19:53:37 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-03 19:53:38 GMT+5:00] | [SYSTEM]: [DATABASE] Chat messages retrieved.
+[2025-10-03 19:55:25 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-03 19:55:27 GMT+5:00] | [SYSTEM]: [DATABASE] Chat messages retrieved.
+[2025-10-03 20:00:09 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-03 20:00:10 GMT+5:00] | [SYSTEM]: [DATABASE] Chat messages retrieved.
+[2025-10-03 20:00:50 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-03 20:00:51 GMT+5:00] | [SYSTEM]: [DATABASE] Chat messages retrieved.
+[2025-10-03 20:01:11 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-03 20:01:12 GMT+5:00] | [SYSTEM]: [DATABASE] Chat messages retrieved.
+[2025-10-03 20:01:54 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-03 20:01:55 GMT+5:00] | [SYSTEM]: [DATABASE] Chat messages retrieved.
+[2025-10-03 20:03:01 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-03 20:03:02 GMT+5:00] | [SYSTEM]: [DATABASE] Chat messages retrieved.
+[2025-10-03 20:15:15 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-03 20:15:16 GMT+5:00] | [SYSTEM]: [DATABASE] Chat messages retrieved.
+[2025-10-03 20:18:03 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-03 20:18:04 GMT+5:00] | [SYSTEM]: [DATABASE] Chat messages retrieved.
+[2025-10-03 20:20:42 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-03 20:20:43 GMT+5:00] | [SYSTEM]: [DATABASE] Chat messages retrieved.
+[2025-10-03 20:20:58 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-03 20:20:58 GMT+5:00] | [SYSTEM]: [DATABASE] Image insertion failed. Document does not exist.
+[2025-10-03 20:22:13 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-03 20:22:14 GMT+5:00] | [SYSTEM]: [DATABASE] New document inserted.
+[2025-10-03 20:22:16 GMT+5:00] | [SYSTEM]: [DATABASE] Image insertion failed. 'InstrumentedList' object has no attribute 'image_id'
+[2025-10-03 20:27:06 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-03 20:27:08 GMT+5:00] | [SYSTEM]: [DATABASE] New document inserted.
+[2025-10-03 20:27:10 GMT+5:00] | [SYSTEM]: [DATABASE] Image insertion failed. 'InstrumentedList' object has no attribute 'image_id'
+[2025-10-03 20:29:34 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-03 20:29:35 GMT+5:00] | [SYSTEM]: [DATABASE] New document inserted.
+[2025-10-03 20:29:37 GMT+5:00] | [SYSTEM]: [DATABASE] Image insertion failed. 'InstrumentedList' object has no attribute 'image_id'
+[2025-10-03 20:36:47 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-03 20:36:48 GMT+5:00] | [SYSTEM]: [DATABASE] New document inserted.
+[2025-10-03 20:36:50 GMT+5:00] | [SYSTEM]: [DATABASE] Image insertion failed. 'InstrumentedList' object has no attribute 'image_id'
+[2025-10-03 20:41:50 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-03 20:41:52 GMT+5:00] | [SYSTEM]: [DATABASE] New document inserted.
+[2025-10-03 20:41:53 GMT+5:00] | [SYSTEM]: [DATABASE] Image insertion failed. 'Document' object has no attribute 'image'
+[2025-10-03 22:23:13 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-03 22:23:15 GMT+5:00] | [SYSTEM]: [DATABASE] New document inserted.
+[2025-10-03 22:23:17 GMT+5:00] | [SYSTEM]: [DATABASE] Image insertion successful.
+[2025-10-03 22:26:17 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-03 22:26:19 GMT+5:00] | [SYSTEM]: [DATABASE] New document inserted.
+[2025-10-03 22:26:21 GMT+5:00] | [SYSTEM]: [DATABASE] Image insertion successful.
+file_cache is only supported with oauth2client<4.0.0
+file_cache is only supported with oauth2client<4.0.0
+[2025-10-05 14:58:11 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+file_cache is only supported with oauth2client<4.0.0
+[2025-10-05 14:58:16 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-05 14:59:12 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+file_cache is only supported with oauth2client<4.0.0
+[2025-10-05 14:59:16 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-05 14:59:18 GMT+5:00] | [SYSTEM]: LLM API Connected
+[2025-10-05 14:59:18 GMT+5:00] | [SYSTEM]: Document class Initialized
+[2025-10-05 15:00:17 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+file_cache is only supported with oauth2client<4.0.0
+[2025-10-05 15:00:21 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-05 15:00:23 GMT+5:00] | [SYSTEM]: LLM API Connected
+[2025-10-05 15:00:23 GMT+5:00] | [SYSTEM]: Document class Initialized
+[2025-10-05 15:01:48 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+file_cache is only supported with oauth2client<4.0.0
+[2025-10-05 15:01:52 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-05 15:01:54 GMT+5:00] | [SYSTEM]: LLM API Connected
+[2025-10-05 15:01:54 GMT+5:00] | [SYSTEM]: Document class Initialized
+[2025-10-05 15:03:14 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+file_cache is only supported with oauth2client<4.0.0
+[2025-10-05 15:03:18 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-05 15:03:20 GMT+5:00] | [SYSTEM]: LLM API Connected
+[2025-10-05 15:03:20 GMT+5:00] | [SYSTEM]: Document class Initialized
+[2025-10-05 15:03:27 GMT+5:00] | [SYSTEM]: Connected to PineconeDB
+[2025-10-05 15:03:27 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+file_cache is only supported with oauth2client<4.0.0
+Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+[2025-10-05 15:05:06 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+file_cache is only supported with oauth2client<4.0.0
+[2025-10-05 15:05:11 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-05 15:05:13 GMT+5:00] | [SYSTEM]: LLM API Connected
+[2025-10-05 15:05:13 GMT+5:00] | [SYSTEM]: Document class Initialized
+[2025-10-05 15:05:15 GMT+5:00] | [SYSTEM]: Connected to PineconeDB
+[2025-10-05 15:05:15 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+file_cache is only supported with oauth2client<4.0.0
+[2025-10-05 15:06:55 GMT+5:00] | [SYSTEM]: [DATABASE] User:taha.moiz authentication successful.
+[2025-10-05 15:08:10 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+file_cache is only supported with oauth2client<4.0.0
+[2025-10-05 15:08:15 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-05 15:08:16 GMT+5:00] | [SYSTEM]: LLM API Connected
+[2025-10-05 15:08:16 GMT+5:00] | [SYSTEM]: Document class Initialized
+[2025-10-05 15:08:25 GMT+5:00] | [SYSTEM]: Connected to PineconeDB
+[2025-10-05 15:08:25 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+file_cache is only supported with oauth2client<4.0.0
+[2025-10-05 15:08:35 GMT+5:00] | [SYSTEM]: [DATABASE] User:taha.moiz authentication successful.
+[2025-10-05 15:08:44 GMT+5:00] | [SYSTEM]: [DATABASE] User:taha.moiz authentication denied.
+[2025-10-05 15:08:57 GMT+5:00] | [SYSTEM]: [DATABASE] User:sahir.mansoor authentication denied.
+[2025-10-05 15:09:03 GMT+5:00] | [SYSTEM]: [DATABASE] User:sahir.mansoor authentication successful.
+[2025-10-05 15:09:13 GMT+5:00] | [SYSTEM]: [DATABASE] User:ali.zain authentication denied.
+[2025-10-05 15:09:20 GMT+5:00] | [SYSTEM]: [DATABASE] User:ali.zain authentication denied.
+[2025-10-05 15:09:30 GMT+5:00] | [SYSTEM]: [DATABASE] User:ali.zain authentication denied.
+[2025-10-05 15:09:37 GMT+5:00] | [SYSTEM]: [DATABASE] User:ali.zain authentication denied.
+[2025-10-05 15:12:09 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+file_cache is only supported with oauth2client<4.0.0
+[2025-10-05 15:12:14 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-05 15:12:16 GMT+5:00] | [SYSTEM]: LLM API Connected
+[2025-10-05 15:12:16 GMT+5:00] | [SYSTEM]: Document class Initialized
+[2025-10-05 15:12:17 GMT+5:00] | [SYSTEM]: Connected to PineconeDB
+[2025-10-05 15:12:17 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+file_cache is only supported with oauth2client<4.0.0
+[2025-10-05 15:14:50 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+file_cache is only supported with oauth2client<4.0.0
+[2025-10-05 15:14:55 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-05 15:15:00 GMT+5:00] | [SYSTEM]: LLM API Connected
+[2025-10-05 15:15:00 GMT+5:00] | [SYSTEM]: Document class Initialized
+[2025-10-05 15:15:02 GMT+5:00] | [SYSTEM]: Connected to PineconeDB
+[2025-10-05 15:15:02 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+file_cache is only supported with oauth2client<4.0.0
+[2025-10-05 15:17:57 GMT+5:00] | [SYSTEM]: [MAIN] /getuserchats/1 API Called
+[2025-10-05 15:17:58 GMT+5:00] | [SYSTEM]: [DATABASE] Chat retrieval failed. 'Chat' object has no attribute 'chat_name'
+[2025-10-05 15:17:58 GMT+5:00] | [SYSTEM]: [MAIN] /getuserchats/1 API Returned
+[2025-10-05 15:20:44 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+file_cache is only supported with oauth2client<4.0.0
+[2025-10-05 15:20:49 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-05 15:20:51 GMT+5:00] | [SYSTEM]: LLM API Connected
+[2025-10-05 15:20:51 GMT+5:00] | [SYSTEM]: Document class Initialized
+[2025-10-05 15:20:56 GMT+5:00] | [SYSTEM]: Connected to PineconeDB
+[2025-10-05 15:20:56 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+file_cache is only supported with oauth2client<4.0.0
+[2025-10-05 15:21:01 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+file_cache is only supported with oauth2client<4.0.0
+[2025-10-05 15:21:06 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-05 15:21:07 GMT+5:00] | [SYSTEM]: LLM API Connected
+[2025-10-05 15:21:07 GMT+5:00] | [SYSTEM]: Document class Initialized
+[2025-10-05 15:21:10 GMT+5:00] | [SYSTEM]: Connected to PineconeDB
+[2025-10-05 15:21:10 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+file_cache is only supported with oauth2client<4.0.0
+[2025-10-05 15:21:20 GMT+5:00] | [SYSTEM]: [MAIN] /getuserchats/1 API Called
+[2025-10-05 15:21:21 GMT+5:00] | [SYSTEM]: [DATABASE] Chats retrieved.
+[2025-10-05 15:21:21 GMT+5:00] | [SYSTEM]: [MAIN] /getuserchats/1 API Returned
+[2025-10-05 15:21:28 GMT+5:00] | [SYSTEM]: [MAIN] /getuserchats/3 API Called
+[2025-10-05 15:21:29 GMT+5:00] | [SYSTEM]: [DATABASE] Chats retrieved.
+[2025-10-05 15:21:29 GMT+5:00] | [SYSTEM]: [MAIN] /getuserchats/3 API Returned
+[2025-10-05 15:21:34 GMT+5:00] | [SYSTEM]: [MAIN] /getuserchats/2 API Called
+[2025-10-05 15:21:35 GMT+5:00] | [SYSTEM]: [DATABASE] Chats retrieved.
+[2025-10-05 15:21:35 GMT+5:00] | [SYSTEM]: [MAIN] /getuserchats/2 API Returned
+[2025-10-05 15:22:30 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+file_cache is only supported with oauth2client<4.0.0
+[2025-10-05 15:22:34 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-05 15:22:36 GMT+5:00] | [SYSTEM]: LLM API Connected
+[2025-10-05 15:22:36 GMT+5:00] | [SYSTEM]: Document class Initialized
+[2025-10-05 15:22:37 GMT+5:00] | [SYSTEM]: Connected to PineconeDB
+[2025-10-05 15:22:37 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+file_cache is only supported with oauth2client<4.0.0
+[2025-10-05 15:22:45 GMT+5:00] | [SYSTEM]: [MAIN] /getchatmessage/2 API Called
+[2025-10-05 15:22:46 GMT+5:00] | [SYSTEM]: [DATABASE] Chat messages retrieved.
+[2025-10-05 15:22:46 GMT+5:00] | [SYSTEM]: [MAIN] /getchatmessage/2 API Returned
+[2025-10-05 15:24:34 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+file_cache is only supported with oauth2client<4.0.0
+[2025-10-05 15:24:38 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-05 15:24:40 GMT+5:00] | [SYSTEM]: LLM API Connected
+[2025-10-05 15:24:40 GMT+5:00] | [SYSTEM]: Document class Initialized
+[2025-10-05 15:24:46 GMT+5:00] | [SYSTEM]: Connected to PineconeDB
+[2025-10-05 15:24:46 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+file_cache is only supported with oauth2client<4.0.0
+[2025-10-05 15:24:49 GMT+5:00] | [SYSTEM]: [MAIN] /getchatmessage/2 API Called
+[2025-10-05 15:24:50 GMT+5:00] | [SYSTEM]: [DATABASE] Chat messages retrieved.
+[2025-10-05 15:24:50 GMT+5:00] | [SYSTEM]: [MAIN] /getchatmessage/2 API Returned
+[2025-10-05 15:24:55 GMT+5:00] | [SYSTEM]: [MAIN] /getchatmessage/3 API Called
+[2025-10-05 15:24:56 GMT+5:00] | [SYSTEM]: [DATABASE] Chat messages retrieved.
+[2025-10-05 15:24:56 GMT+5:00] | [SYSTEM]: [MAIN] /getchatmessage/3 API Returned
+[2025-10-05 15:25:10 GMT+5:00] | [SYSTEM]: [MAIN] /getuserchats/1 API Called
+[2025-10-05 15:25:11 GMT+5:00] | [SYSTEM]: [DATABASE] Chats retrieved.
+[2025-10-05 15:25:11 GMT+5:00] | [SYSTEM]: [MAIN] /getuserchats/1 API Returned
+[2025-10-05 15:25:19 GMT+5:00] | [SYSTEM]: [MAIN] /getchatmessage/3 API Called
+[2025-10-05 15:25:20 GMT+5:00] | [SYSTEM]: [DATABASE] Chat messages retrieved.
+[2025-10-05 15:25:20 GMT+5:00] | [SYSTEM]: [MAIN] /getchatmessage/3 API Returned
+[2025-10-05 15:26:44 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+file_cache is only supported with oauth2client<4.0.0
+[2025-10-05 15:26:49 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-05 15:26:50 GMT+5:00] | [SYSTEM]: LLM API Connected
+[2025-10-05 15:26:50 GMT+5:00] | [SYSTEM]: Document class Initialized
+[2025-10-05 15:26:54 GMT+5:00] | [SYSTEM]: Connected to PineconeDB
+[2025-10-05 15:26:54 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+file_cache is only supported with oauth2client<4.0.0
+[2025-10-05 15:27:03 GMT+5:00] | [SYSTEM]: [MAIN] /chat API Called
+[2025-10-05 15:27:05 GMT+5:00] | [SYSTEM]: [DATABASE] Added hey!... to chat: 1
+[2025-10-05 15:27:06 GMT+5:00] | [SYSTEM]: [DATABASE] Chat messages retrieved.
+[2025-10-05 15:27:07 GMT+5:00] | [SYSTEM]: [DATABASE] Retrieved all document descriptions.
+[2025-10-05 15:27:08 GMT+5:00] | --> [RESP:1]: [MAIN] Validator: Greeting
+[2025-10-05 15:27:09 GMT+5:00] | [SYSTEM]: [DATABASE] Retrieved all document descriptions.
+[2025-10-05 15:27:10 GMT+5:00] | --> [RESP:1]: Hello there! How can I assist you today? \U0001f60a
+[2025-10-05 15:27:12 GMT+5:00] | [SYSTEM]: [DATABASE] Added Hello ther... to chat: 1
+[2025-10-05 15:27:12 GMT+5:00] | [SYSTEM]: [MAIN] /chat API Returned
+[2025-10-05 15:27:41 GMT+5:00] | [SYSTEM]: [MAIN] /chat API Called
+[2025-10-05 15:27:43 GMT+5:00] | [SYSTEM]: [DATABASE] Added can u tell... to chat: 1
+[2025-10-05 15:27:44 GMT+5:00] | [SYSTEM]: [DATABASE] Chat messages retrieved.
+[2025-10-05 15:27:44 GMT+5:00] | [SYSTEM]: [DATABASE] Retrieved all document descriptions.
+[2025-10-05 15:27:45 GMT+5:00] | --> [RESP:1]: [MAIN] Validator: Valid RAG Question
+[2025-10-05 15:27:45 GMT+5:00] | [SYSTEM]: Querying Text in PineconeDB
+[2025-10-05 15:27:50 GMT+5:00] | [SYSTEM]: Querying Images in PineconeDB
+[2025-10-05 15:27:52 GMT+5:00] | [SYSTEM]: [DATABASE] Retrieved all document descriptions.
+[2025-10-05 15:30:39 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+file_cache is only supported with oauth2client<4.0.0
+[2025-10-05 15:30:43 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-05 15:30:44 GMT+5:00] | [SYSTEM]: LLM API Connected
+[2025-10-05 15:30:44 GMT+5:00] | [SYSTEM]: Document class Initialized
+[2025-10-05 15:30:51 GMT+5:00] | [SYSTEM]: Connected to PineconeDB
+[2025-10-05 15:30:51 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+file_cache is only supported with oauth2client<4.0.0
+[2025-10-05 15:31:50 GMT+5:00] | [SYSTEM]: [MAIN] /chat API Called
+[2025-10-05 15:31:52 GMT+5:00] | [SYSTEM]: [DATABASE] Added can u tell... to chat: 1
+[2025-10-05 15:31:53 GMT+5:00] | [SYSTEM]: [DATABASE] Chat messages retrieved.
+[2025-10-05 15:31:53 GMT+5:00] | [SYSTEM]: [DATABASE] Retrieved all document descriptions.
+[2025-10-05 15:31:55 GMT+5:00] | --> [RESP:1]: [MAIN] Validator: Valid RAG Question
+[2025-10-05 15:31:55 GMT+5:00] | [SYSTEM]: Querying Text in PineconeDB
+[2025-10-05 15:31:58 GMT+5:00] | [SYSTEM]: Querying Images in PineconeDB
+[2025-10-05 15:32:00 GMT+5:00] | [SYSTEM]: [DATABASE] Retrieved all document descriptions.
+[2025-10-05 15:32:04 GMT+5:00] | --> [RESP:1]: REC stands for Religious Education Centre. It is a facility, usually located on or near Jamat Khana premises, where religious education activities are organized for the community. Here are some key points about REC:
+
+- It operates under a Religious Education Centre Committee (RECC) that manages its activities.
+- The REC Policy Manual provides guidelines to effectively manage REC operations, roles, and responsibilities.
+- The objectives include ensuring uniformity, professionalism, and quality in REC management.
+- In areas with smaller populations, one RECC may oversee multiple RECs, but larger RECs have dedicated RECCs.
+- The REC setup involves coordination with local boards and community stakeholders.
+
+Would you like me to explain the roles of the RECC or how an REC is managed?
+[2025-10-05 15:32:06 GMT+5:00] | [SYSTEM]: [DATABASE] Added REC stands... to chat: 1
+[2025-10-05 15:32:06 GMT+5:00] | [SYSTEM]: [MAIN] /chat API Returned
+[2025-10-05 15:34:00 GMT+5:00] | [SYSTEM]: [MAIN] /upload-document API Called
+[2025-10-05 15:34:00 GMT+5:00] | [SYSTEM]: [MAIN] Starting document processing...
+[2025-10-05 15:34:00 GMT+5:00] | [SYSTEM]: [MAIN] Document saved to local folder...
+[2025-10-05 15:34:00 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+file_cache is only supported with oauth2client<4.0.0
+[2025-10-05 15:34:03 GMT+5:00] | [SYSTEM]: [BLOB] Uploading successful. REC Policy Manual 2024.pdf
+[2025-10-05 15:34:03 GMT+5:00] | [SYSTEM]: [MAIN] Document saved to blob...
+[2025-10-05 15:34:16 GMT+5:00] | [SYSTEM]: [MAIN] Document summary created...
+[2025-10-05 15:34:17 GMT+5:00] | [SYSTEM]: [DATABASE] New document inserted.
+[2025-10-05 15:34:17 GMT+5:00] | [SYSTEM]: [MAIN] Document inserted in Database...
+[2025-10-05 15:34:21 GMT+5:00] | [SYSTEM]: Upsert Document --- Upserting Records to PineconeDB
+[2025-10-05 15:34:25 GMT+5:00] | [SYSTEM]: Upsert Document --- Upserting Records to PineconeDB SUCCESSFUL
+[2025-10-05 15:34:25 GMT+5:00] | [SYSTEM]: [MAIN] Document inserted in PineconeDB...
+[2025-10-05 15:34:25 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+file_cache is only supported with oauth2client<4.0.0
+[2025-10-05 15:34:25 GMT+5:00] | [SYSTEM]: [BLOB] Uploading failed. [Errno 2] No such file or directory: './images\\REC Policy Manual 2024_pg11_img1.png'
+[2025-10-05 15:34:25 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+file_cache is only supported with oauth2client<4.0.0
+[2025-10-05 15:34:25 GMT+5:00] | [SYSTEM]: [BLOB] Uploading failed. [Errno 2] No such file or directory: './images\\REC Policy Manual 2024_pg21_img1.png'
+[2025-10-05 15:34:25 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+file_cache is only supported with oauth2client<4.0.0
+[2025-10-05 15:34:25 GMT+5:00] | [SYSTEM]: [BLOB] Uploading failed. [Errno 2] No such file or directory: './images\\REC Policy Manual 2024_pg21_img2.png'
+[2025-10-05 15:34:25 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+file_cache is only supported with oauth2client<4.0.0
+[2025-10-05 15:34:25 GMT+5:00] | [SYSTEM]: [BLOB] Uploading failed. [Errno 2] No such file or directory: './images\\REC Policy Manual 2024_pg36_img1.png'
+[2025-10-05 15:34:25 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+file_cache is only supported with oauth2client<4.0.0
+[2025-10-05 15:34:25 GMT+5:00] | [SYSTEM]: [BLOB] Uploading failed. [Errno 2] No such file or directory: './images\\REC Policy Manual 2024_pg59_img1.png'
+[2025-10-05 15:34:25 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+file_cache is only supported with oauth2client<4.0.0
+[2025-10-05 15:34:25 GMT+5:00] | [SYSTEM]: [BLOB] Uploading failed. [Errno 2] No such file or directory: './images\\REC Policy Manual 2024_pg60_img1.png'
+[2025-10-05 15:34:25 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+file_cache is only supported with oauth2client<4.0.0
+[2025-10-05 15:34:25 GMT+5:00] | [SYSTEM]: [BLOB] Uploading failed. [Errno 2] No such file or directory: './images\\REC Policy Manual 2024_pg63_img1.png'
+[2025-10-05 15:34:26 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+file_cache is only supported with oauth2client<4.0.0
+[2025-10-05 15:34:26 GMT+5:00] | [SYSTEM]: [BLOB] Uploading failed. [Errno 2] No such file or directory: './images\\REC Policy Manual 2024_pg65_img1.png'
+[2025-10-05 15:34:26 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+file_cache is only supported with oauth2client<4.0.0
+[2025-10-05 15:34:26 GMT+5:00] | [SYSTEM]: [BLOB] Uploading failed. [Errno 2] No such file or directory: './images\\REC Policy Manual 2024_pg77_img1.png'
+[2025-10-05 15:34:26 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+file_cache is only supported with oauth2client<4.0.0
+[2025-10-05 15:34:26 GMT+5:00] | [SYSTEM]: [BLOB] Uploading failed. [Errno 2] No such file or directory: './images\\REC Policy Manual 2024_pg78_img1.png'
+[2025-10-05 15:34:26 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+file_cache is only supported with oauth2client<4.0.0
+[2025-10-05 15:34:26 GMT+5:00] | [SYSTEM]: [BLOB] Uploading failed. [Errno 2] No such file or directory: './images\\REC Policy Manual 2024_pg79_img1.png'
+[2025-10-05 15:34:26 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+file_cache is only supported with oauth2client<4.0.0
+[2025-10-05 15:34:26 GMT+5:00] | [SYSTEM]: [BLOB] Uploading failed. [Errno 2] No such file or directory: './images\\REC Policy Manual 2024_pg80_img1.png'
+[2025-10-05 15:34:26 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+file_cache is only supported with oauth2client<4.0.0
+[2025-10-05 15:34:26 GMT+5:00] | [SYSTEM]: [BLOB] Uploading failed. [Errno 2] No such file or directory: './images\\REC Policy Manual 2024_pg85_img1.png'
+[2025-10-05 15:34:26 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+file_cache is only supported with oauth2client<4.0.0
+[2025-10-05 15:34:26 GMT+5:00] | [SYSTEM]: [BLOB] Uploading failed. [Errno 2] No such file or directory: './images\\REC Policy Manual 2024_pg88_img1.png'
+[2025-10-05 15:34:26 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+file_cache is only supported with oauth2client<4.0.0
+[2025-10-05 15:34:26 GMT+5:00] | [SYSTEM]: [BLOB] Uploading failed. [Errno 2] No such file or directory: './images\\REC Policy Manual 2024_pg123_img1.png'
+[2025-10-05 15:34:26 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+file_cache is only supported with oauth2client<4.0.0
+[2025-10-05 15:34:26 GMT+5:00] | [SYSTEM]: [BLOB] Uploading failed. [Errno 2] No such file or directory: './images\\REC Policy Manual 2024_pg130_img1.png'
+[2025-10-05 15:34:26 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+file_cache is only supported with oauth2client<4.0.0
+[2025-10-05 15:34:26 GMT+5:00] | [SYSTEM]: [BLOB] Uploading failed. [Errno 2] No such file or directory: './images\\REC Policy Manual 2024_pg133_img1.png'
+[2025-10-05 15:34:26 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+file_cache is only supported with oauth2client<4.0.0
+[2025-10-05 15:34:26 GMT+5:00] | [SYSTEM]: [BLOB] Uploading failed. [Errno 2] No such file or directory: './images\\REC Policy Manual 2024_pg140_img1.png'
+[2025-10-05 15:34:26 GMT+5:00] | [SYSTEM]: [MAIN] Images extracted from the document...
+[2025-10-05 15:34:26 GMT+5:00] | [SYSTEM]: Embedding and Upserting Images --- CLIP Embedding Images
