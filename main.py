@@ -178,7 +178,7 @@ class ChatMessage(BaseModel):
     timestamp: datetime
 
 @app.get("/getuserchats")
-def get_user_chats(user_id: int = Form(...)):
+def get_user_chats(user_id: int):
     log.log_event("SYSTEM", f"[MAIN] /getuserchats/{user_id} API Called")
     raw_chat_data = db.get_chats(user_id=user_id)
     log.log_event("SYSTEM", f"[MAIN] /getuserchats/{user_id} API Returned")
@@ -187,7 +187,7 @@ def get_user_chats(user_id: int = Form(...)):
 
 # 4) GET - get chat msgs by chatid
 @app.get("/getchatmessages")
-async def get_chat(chat_id: int = Form(...)):
+async def get_chat(chat_id: int):
     log.log_event("SYSTEM", f"[MAIN] /getchatmessage/{chat_id} API Called")
     
     _, chatmsgs = db.get_chat_msgs(chat_id=chat_id)
