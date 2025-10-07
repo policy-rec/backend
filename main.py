@@ -2,6 +2,7 @@ from fastapi import FastAPI, UploadFile, File, Form, HTTPException
 # from apscheduler.schedulers.background import BackgroundScheduler
 from fastapi.responses import JSONResponse
 from fastapi.responses import FileResponse
+from fastapi.encoders import jsonable_encoder
 from fastapi.middleware.cors import CORSMiddleware
 from document_handling import Document
 from pydantic import BaseModel
@@ -373,18 +374,12 @@ async def get_user_info_endpoint(userID: int):
         user = db.get_user_info(user_id=userID)
 
         if user:
+            enc_user = jsonable_encoder(user)
             log.log_event("SYSTEM", "[MAIN] /get_user_info_endpoint returned - status(200)")
             return JSONResponse(
                 status_code=200,
                 content={
-                    "message": "User information fetched successfully",
-                    "user_id": user.get("user_id"),
-                    "username": user.get("username"),
-                    "role": user.get("role"),
-                    "created_at": user.get("created_at"),
-                    "last_login": user.get("last_login"),
-                    "is_active": user.get("is_active"),
-                    "no_of_chats": user.get("no_of_chats"),
+                    "user": enc_user
                 }
             )
         else:
@@ -410,12 +405,24 @@ async def get_all_users_endpoint():
     log.log_event("SYSTEM", "[MAIN] /get_all_users_endpoint called")
     try:
         user = db.get_all_users_info()
+        print(type(user))
+        try:
+            json.dumps(user)
+            print("User object is serializable")
+        except Exception as e:
+            print("Serialization error:", e)
 
         if user:
+            print('1')
+            enc_user = jsonable_encoder(user)
             log.log_event("SYSTEM", "[MAIN] /get_all_users_endpoint returned - status(200)")
             return JSONResponse(
                 status_code=200,
-                content=user
+                content={
+                    "users": enc_user,
+                    "total_users": len(enc_user),
+                    "total_chats": sum(u.get("no_of_chats", 0) for u in enc_user)
+                }
             )
         else:
             return JSONResponse(
@@ -425,6 +432,7 @@ async def get_all_users_endpoint():
                 }
             )
     except Exception as excp:
+        print('2')
         log.log_event("SYSTEM", "[MAIN] /get_all_users_endpoint returned - status(500)")
         return JSONResponse(
             status_code=500,
