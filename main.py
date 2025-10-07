@@ -109,20 +109,21 @@ async def upload_document(file: UploadFile = File(...)):
 
 # 2) POST - chat (with optional image)
 @app.post("/chat")
-async def chat_endpoint(userID: int = Form(...), chatID: int = Form(...), text: str = Form(...), image: Optional[UploadFile] = File(None)):
+# async def chat_endpoint(userID: int = Form(...), chatID: int = Form(...), text: str = Form(...), image: Optional[UploadFile] = File(None)):
+async def chat_endpoint(userID: int = Form(...), chatID: int = Form(...), text: str = Form(...)):
     log.log_event("SYSTEM", "[MAIN] /chat API Called")
     
     response = ""
     image_location = None
     rag_img_ans = None
 
-    if image:
-        log.log_event("SYSTEM", f"[MAIN] User {userID} provided an image")
-        image_location = os.path.join(CHAT_IMG_FOLDER, str(image.filename))
-        blob.upload_file(service=blob.authenticate(), file_path=image_location, folder_name="ChatImages")
-        with open(image_location, "wb") as f:
-            content = await image.read()
-            f.write(content)
+    # if image:
+    #     log.log_event("SYSTEM", f"[MAIN] User {userID} provided an image")
+    #     image_location = os.path.join(CHAT_IMG_FOLDER, str(image.filename))
+    #     blob.upload_file(service=blob.authenticate(), file_path=image_location, folder_name="ChatImages")
+    #     with open(image_location, "wb") as f:
+    #         content = await image.read()
+    #         f.write(content)
 
     db.add_message(chat_id=chatID, sender='user', message=text)
     # log.log_event("USER", msg=text, uid=userID, cid=1)
@@ -141,7 +142,7 @@ async def chat_endpoint(userID: int = Form(...), chatID: int = Form(...), text: 
         # if rag_img_ans:
             # response = llm.respond(user_input=llm.__format_RLLM_input__(document_context=db.get_all_doc_descriptions(), user_input=text, vllm_classification=input_classification, rag_ans=rag_ans, convo=user_conversation), user_image_path=image_location, rag_image_path=os.path.join(IMAGE_FOLDER, rag_img_ans))
         # else:
-        response = llm.respond(user_input=llm.__format_RLLM_input__(document_context=db.get_all_doc_descriptions(), user_input=text, vllm_classification=input_classification, rag_ans=rag_ans, convo=user_conversation), user_image_path=image_location, rag_image_path='')
+        response = llm.respond(user_input=llm.__format_RLLM_input__(document_context=db.get_all_doc_descriptions(), user_input=text, vllm_classification=input_classification, rag_ans=rag_ans, convo=user_conversation), user_image_path='', rag_image_path='')
         log.log_event("RESP", msg=response, uid=userID, cid=1)
     else:
         response = llm.respond(user_input=llm.__format_RLLM_input__(document_context=db.get_all_doc_descriptions(), user_input=text, vllm_classification=input_classification, rag_ans=None, convo=user_conversation), user_image_path=None, rag_image_path=None)
@@ -361,5 +362,73 @@ async def refresh_logs_endpoint():
             content={
                 "message": "Failed to refresh logs",
                 "exception": excp
+            }
+        )
+    
+@app.get("/get-user-info")
+async def get_user_info_endpoint(userID: int):
+    log.log_event("SYSTEM", "[MAIN] /get_user_info_endpoint called")
+
+    try:
+        user = db.get_user_info(user_id=userID)
+
+        if user:
+            log.log_event("SYSTEM", "[MAIN] /get_user_info_endpoint returned - status(200)")
+            return JSONResponse(
+                status_code=200,
+                content={
+                    "message": "User information fetched successfully",
+                    "user_id": user.get("user_id"),
+                    "username": user.get("username"),
+                    "role": user.get("role"),
+                    "created_at": user.get("created_at"),
+                    "last_login": user.get("last_login"),
+                    "is_active": user.get("is_active"),
+                    "no_of_chats": user.get("no_of_chats"),
+                }
+            )
+        else:
+            return JSONResponse(
+                status_code=404,
+                content={
+                    "message": "User not found",
+                    "userID": userID
+                }
+            )
+    except Exception as excp:
+        log.log_event("SYSTEM", "[MAIN] /get_user_info_endpoint returned - status(500)")
+        return JSONResponse(
+            status_code=500,
+            content={
+                "message": "Failed to fetch user information",
+                "userID": userID
+            }
+        )
+    
+@app.get("/get-all-users")
+async def get_all_users_endpoint():
+    log.log_event("SYSTEM", "[MAIN] /get_all_users_endpoint called")
+    try:
+        user = db.get_all_users_info()
+
+        if user:
+            log.log_event("SYSTEM", "[MAIN] /get_all_users_endpoint returned - status(200)")
+            return JSONResponse(
+                status_code=200,
+                content=user
+            )
+        else:
+            return JSONResponse(
+                status_code=404,
+                content={
+                    "message": "Users not found",
+                }
+            )
+    except Exception as excp:
+        log.log_event("SYSTEM", "[MAIN] /get_all_users_endpoint returned - status(500)")
+        return JSONResponse(
+            status_code=500,
+            content={
+                "message": "Failed to fetch users information",
             }
         )

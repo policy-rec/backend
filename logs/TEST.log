@@ -351,3 +351,43 @@ file_cache is only supported with oauth2client<4.0.0
 [2025-10-05 15:34:26 GMT+5:00] | [SYSTEM]: [BLOB] Uploading failed. [Errno 2] No such file or directory: './images\\REC Policy Manual 2024_pg140_img1.png'
 [2025-10-05 15:34:26 GMT+5:00] | [SYSTEM]: [MAIN] Images extracted from the document...
 [2025-10-05 15:34:26 GMT+5:00] | [SYSTEM]: Embedding and Upserting Images --- CLIP Embedding Images
+[2025-10-07 12:02:25 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+file_cache is only supported with oauth2client<4.0.0
+[2025-10-07 12:02:30 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-07 12:02:39 GMT+5:00] | [SYSTEM]: LLM API Connected
+[2025-10-07 12:02:39 GMT+5:00] | [SYSTEM]: Document class Initialized
+[2025-10-07 12:02:47 GMT+5:00] | [SYSTEM]: Connected to PineconeDB
+[2025-10-07 12:02:47 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+file_cache is only supported with oauth2client<4.0.0
+[2025-10-07 12:02:52 GMT+5:00] | [SYSTEM]: [MAIN] /refresh_logs_endpoint called
+[2025-10-07 12:02:52 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+file_cache is only supported with oauth2client<4.0.0
+[2025-10-07 12:02:56 GMT+5:00] | [SYSTEM]: [BLOB] File uploaded successfully. TEST.log
+[2025-10-07 12:02:56 GMT+5:00] | [SYSTEM]: [MAIN] /refresh_logs_endpoint returned - status(200)
+[2025-10-07 12:03:57 GMT+5:00] | [SYSTEM]: [MAIN] /refresh_logs_endpoint called
+[2025-10-07 12:03:57 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+file_cache is only supported with oauth2client<4.0.0
+[2025-10-07 12:04:00 GMT+5:00] | [SYSTEM]: [BLOB] File updated successfully. TEST.log
+[2025-10-07 12:04:00 GMT+5:00] | [SYSTEM]: [MAIN] /refresh_logs_endpoint returned - status(200)
+[2025-10-07 12:09:21 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+file_cache is only supported with oauth2client<4.0.0
+[2025-10-07 12:09:26 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-07 12:09:29 GMT+5:00] | [SYSTEM]: LLM API Connected
+[2025-10-07 12:09:29 GMT+5:00] | [SYSTEM]: Document class Initialized
+[2025-10-07 12:09:37 GMT+5:00] | [SYSTEM]: Connected to PineconeDB
+[2025-10-07 12:09:37 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+file_cache is only supported with oauth2client<4.0.0
+[2025-10-07 12:09:51 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+[2025-10-07 12:09:56 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-07 12:09:59 GMT+5:00] | [SYSTEM]: LLM API Connected
+[2025-10-07 12:09:59 GMT+5:00] | [SYSTEM]: Document class Initialized
+[2025-10-07 12:10:03 GMT+5:00] | [SYSTEM]: Connected to PineconeDB
+[2025-10-07 12:10:03 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+[2025-10-07 12:10:16 GMT+5:00] | [SYSTEM]: [MAIN] /refresh_logs_endpoint called
+[2025-10-07 12:10:16 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+[2025-10-07 12:10:19 GMT+5:00] | [SYSTEM]: [BLOB] File updated successfully. TEST.log
+[2025-10-07 12:10:19 GMT+5:00] | [SYSTEM]: [MAIN] /refresh_logs_endpoint returned - status(200)
+[2025-10-07 12:11:09 GMT+5:00] | [SYSTEM]: [MAIN] /refresh_logs_endpoint called
+[2025-10-07 12:11:09 GMT+5:00] | [SYSTEM]: [BLOB] Authentication successful.
+[2025-10-07 12:11:12 GMT+5:00] | [SYSTEM]: [BLOB] File updated successfully. TEST.log
+[2025-10-07 12:11:12 GMT+5:00] | [SYSTEM]: [MAIN] /refresh_logs_endpoint returned - status(200)

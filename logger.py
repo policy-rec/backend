@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 LOGS_PATH = str(os.getenv('LOG_FOLDER'))
-LOGS_TEST_FILE = str(os.getenv('LOG_TEST_FILE'))
+LOGS_TEST_FILE = str(os.getenv('LOG_FILE'))
 
 class Logger:
     def __init__(self):
