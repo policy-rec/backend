@@ -26,18 +26,18 @@ class Blob:
     def authenticate(self) -> Any | None:
         creds = None
         try:
-            if os.path.exists('/etc/secrets/token.json'):
-                creds = Credentials.from_authorized_user_file('/etc/secrets/token.json', self.SCOPES)
+            if os.path.exists('./etc/secrets/token.json'):
+                creds = Credentials.from_authorized_user_file('./etc/secrets/token.json', self.SCOPES)
 
             if not creds or not creds.valid:
                 if creds and creds.expired and creds.refresh_token:
                     creds.refresh(Request())
                 else:
                     flow = InstalledAppFlow.from_client_secrets_file(
-                        '/etc/secrets/credentials.json', self.SCOPES)
+                        './etc/secrets/credentials.json', self.SCOPES)
                     creds = flow.run_local_server(port=0)
 
-                with open('/etc/secrets/token.json', 'w') as token:
+                with open('./etc/secrets/token.json', 'w') as token:
                     token.write(creds.to_json())
             
             log.log_event("SYSTEM", f"[BLOB] Authentication successful.")

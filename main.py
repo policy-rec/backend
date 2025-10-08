@@ -139,7 +139,8 @@ async def chat_endpoint(userID: int = Form(...), chatID: int = Form(...), text: 
 
     if input_classification == "Valid RAG Question":
         rag_ans = doc.query_text(user_query=text)
-        rag_img_ans = doc.query_images_with_text(query=text)      
+        # rag_img_ans = doc.query_images_with_text(query=text)      
+        rag_img_ans = None      
         # if rag_img_ans:
             # response = llm.respond(user_input=llm.__format_RLLM_input__(document_context=db.get_all_doc_descriptions(), user_input=text, vllm_classification=input_classification, rag_ans=rag_ans, convo=user_conversation), user_image_path=image_location, rag_image_path=os.path.join(IMAGE_FOLDER, rag_img_ans))
         # else:
@@ -171,7 +172,6 @@ async def chat_endpoint(userID: int = Form(...), chatID: int = Form(...), text: 
         "image_answer": [rag_img_ans] if rag_img_ans else None
     }
 
-
 # 3) GET - get user chats
 class ChatMessage(BaseModel):
     message_id: int
@@ -185,7 +185,6 @@ def get_user_chats(user_id: int):
     raw_chat_data = db.get_chats(user_id=user_id)
     log.log_event("SYSTEM", f"[MAIN] /getuserchats/{user_id} API Returned")
     return raw_chat_data
-
 
 # 4) GET - get chat msgs by chatid
 @app.get("/getchatmessages")
@@ -405,12 +404,6 @@ async def get_all_users_endpoint():
     log.log_event("SYSTEM", "[MAIN] /get_all_users_endpoint called")
     try:
         user = db.get_all_users_info()
-        print(type(user))
-        try:
-            json.dumps(user)
-            print("User object is serializable")
-        except Exception as e:
-            print("Serialization error:", e)
 
         if user:
             print('1')
@@ -440,3 +433,36 @@ async def get_all_users_endpoint():
                 "message": "Failed to fetch users information",
             }
         )
+    
+@app.post("/create-user")
+async def create_user_endpoint(username: int = Form(...), password: str = Form(...), role: str = Form(...)):
+    log.log_event("SYSTEM", "[MAIN] /create_user_endpoint called")
+    try:
+        user = db.create_user(username=username, password=password, role=role)
+
+        if user:
+            log.log_event("SYSTEM", "[MAIN] /create_user_endpoint returned - status(200)")
+            return JSONResponse(
+                status_code=200,
+                content={
+                    "message": f"User: {username} created successfully."
+                }
+            )
+        else:
+            log.log_event("SYSTEM", "[MAIN] /create_user_endpoint returned - status(500)")
+            return JSONResponse(
+                status_code=500,
+                content={
+                    "message": "User creation failed."
+                }
+            )
+    except Exception as excp:
+        log.log_event("SYSTEM", "[MAIN] /create_user_endpoint returned - status(500)")
+        return JSONResponse(
+            status_code=500,
+            content={
+                "message": "User creation failed.",
+                "exception": excp
+            }
+        )
+
