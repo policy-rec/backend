@@ -492,6 +492,21 @@ class DBHandler:
         
         log.log_event("SYSTEM", f"[DATABASE] User role changed.")
         return True
+    
+    def change_password(self, user_id, password) -> bool | None:
+        try:
+            with self.Session() as session:
+                user: User = session.query(User).get(user_id) 
+                if user:
+                    user.__set_password__(password=password)
+                    session.commit()
+                else:
+                    return None
+        except Exception as excp:
+            return None
+        
+        log.log_event("SYSTEM", f"[DATABASE] User password changed.")
+        return True
     #####################
     # Chat class handling
     def add_message(self, chat_id, sender, message: str) -> dict | None:

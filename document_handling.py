@@ -148,7 +148,7 @@ class Document:
             image_input = image_tensor.unsqueeze(0).to(device)
 
             with torch.no_grad():
-                image_vec = model.encode_image(image).squeeze(0)
+                image_vec = model.encode_image(image_input).squeeze(0)
                 image_vec = F.normalize(image_vec, dim=0)
 
         if text:

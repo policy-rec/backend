@@ -495,17 +495,24 @@ async def create_chat_endpoint(userID: int = Form(...), chat_name: Optional[str]
             }
         )
 
-@app.post("/change_user_role")
-async def change_user_role_endpoint(userID: int = Form(...), role: str = Form(...)):
-    log.log_event("SYSTEM", "[MAIN] /change_user_role_endpoint called")
+@app.post("/change-user-details")
+async def change_user_details_endpoint(userID: int = Form(...), role: str | None = Form(...), password: str | None = Form(...)):
+    log.log_event("SYSTEM", "[MAIN] /change_user_details_endpoint called")
+    user_role = None
+    user_password = None
+    
     try:
-        user = db.change_role(user_id=userID, role=role)
+        if role:
+            user_role = db.change_role(user_id=userID, role=role)
 
-        if user:
+        if password:
+            user_password = db.change_password(user_id=userID, password=password)
+
+        if user_role or user_password:
             return JSONResponse(
                 status_code=200,
                 content={
-                    "message": f"User role changed successfully. New role: {role}",
+                    "message": f"User details changed successfully.",
                 }
             )
         else:
