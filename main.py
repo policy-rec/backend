@@ -69,7 +69,6 @@ ALLOWED_EXTENSIONS = {".pdf", ".png"}
 def read_root():
     return {"message": "API is running!"}
 
-# 1) POST - upload document
 @app.post("/upload-document")
 async def upload_document(file: UploadFile = File(...)):
     log.log_event("SYSTEM", "[MAIN] /upload-document API Called")
@@ -108,7 +107,6 @@ async def upload_document(file: UploadFile = File(...)):
         "filename": file.filename
     }
 
-# 2) POST - chat (with optional image)
 @app.post("/chat")
 # async def chat_endpoint(userID: int = Form(...), chatID: int = Form(...), text: str = Form(...), image: Optional[UploadFile] = File(None)):
 async def chat_endpoint(userID: int = Form(...), chatID: int = Form(...), text: str = Form(...)):
@@ -172,7 +170,6 @@ async def chat_endpoint(userID: int = Form(...), chatID: int = Form(...), text: 
         "image_answer": [rag_img_ans] if rag_img_ans else None
     }
 
-# 3) GET - get user chats
 class ChatMessage(BaseModel):
     message_id: int
     sender: str
@@ -186,7 +183,6 @@ def get_user_chats(user_id: int):
     log.log_event("SYSTEM", f"[MAIN] /getuserchats/{user_id} API Returned")
     return raw_chat_data
 
-# 4) GET - get chat msgs by chatid
 @app.get("/getchatmessages")
 async def get_chat(chat_id: int):
     log.log_event("SYSTEM", f"[MAIN] /getchatmessage/{chat_id} API Called")
@@ -196,8 +192,6 @@ async def get_chat(chat_id: int):
     log.log_event("SYSTEM", f"[MAIN] /getchatmessage/{chat_id} API Returned")
     return chatmsgs
 
-
-# 5) GET - get RAG image answers
 @app.get("/get-image")
 async def get_file(filename: str, inline: bool = False):
     log.log_event("SYSTEM", "[MAIN] /get-image API Called")
@@ -435,7 +429,7 @@ async def get_all_users_endpoint():
         )
     
 @app.post("/create-user")
-async def create_user_endpoint(username: int = Form(...), password: str = Form(...), role: str = Form(...)):
+async def create_user_endpoint(username: str = Form(...), password: str = Form(...), role: str = Form(...)):
     log.log_event("SYSTEM", "[MAIN] /create_user_endpoint called")
     try:
         user = db.create_user(username=username, password=password, role=role)
@@ -466,3 +460,66 @@ async def create_user_endpoint(username: int = Form(...), password: str = Form(.
             }
         )
 
+@app.post("/create-chat")
+async def create_chat_endpoint(userID: int = Form(...), chat_name: Optional[str] = Form(...)):
+    try:
+        log.log_event("SYSTEM", "[MAIN] /create_chat_endpoint called")
+        if chat_name:
+            chat = db.create_chat(user_id=userID, chat_name=chat_name)
+        else:
+            chat = db.create_chat(user_id=userID)
+
+        if chat:
+            log.log_event("SYSTEM", "[MAIN] /create_chat_endpoint returned - status(200)")
+            return JSONResponse(
+                status_code=200,
+                content={
+                    "message": "Chat created successfully."
+                }
+            )
+        else:
+            log.log_event("SYSTEM", "[MAIN] /create_chat_endpoint returned - status(500)")
+            return JSONResponse(
+            status_code=500,
+            content={
+                "message": "Failed to create chat.",
+            }
+        )
+    except Exception as excp:
+        log.log_event("SYSTEM", "[MAIN] /create_chat_endpoint returned - status(500)")
+        return JSONResponse(
+            status_code=500,
+            content={
+                "message": "Failed to create chat.",
+                "exception": excp
+            }
+        )
+
+@app.post("/change_user_role")
+async def change_user_role_endpoint(userID: int = Form(...), role: str = Form(...)):
+    log.log_event("SYSTEM", "[MAIN] /change_user_role_endpoint called")
+    try:
+        user = db.change_role(user_id=userID, role=role)
+
+        if user:
+            return JSONResponse(
+                status_code=200,
+                content={
+                    "message": f"User role changed successfully. New role: {role}",
+                }
+            )
+        else:
+            return JSONResponse(
+                status_code=500,
+                content={
+                    "message": "Incorrect userID or role."
+                }
+            )
+    except Exception as excp:
+        return JSONResponse(
+            status_code=500,
+            content={
+                "message": "User role changed failed.",
+                "exception": excp
+            }
+        )

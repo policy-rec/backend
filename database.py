@@ -138,6 +138,9 @@ class User(Base):
     def __activate_user__(self) -> None:
         self.is_active = True
 
+    def __change_role__(self, role: str) -> None:
+        self.role = role
+
     @classmethod
     def authenticate(cls, session, username, password) -> dict | None:
 
@@ -471,7 +474,24 @@ class DBHandler:
         log.log_event("SYSTEM", f"[DATABASE] User activation successful.")
         return True
     
-    
+    def change_role(self, user_id, role) -> bool | None:
+        try:
+            with self.Session() as session:
+                user: User = session.query(User).get(user_id) 
+
+                if user:
+                    if role == 'admin' or role == 'user':
+                        user.__change_role__(role=role)
+                        session.commit()
+                    else:
+                        return None
+                else:
+                    return None
+        except Exception as excp:
+            return None
+        
+        log.log_event("SYSTEM", f"[DATABASE] User role changed.")
+        return True
     #####################
     # Chat class handling
     def add_message(self, chat_id, sender, message: str) -> dict | None:
@@ -501,8 +521,7 @@ class DBHandler:
         
         log.log_event("SYSTEM", f"[DATABASE] New chat created.")
         return chat
-    
-    
+       
     #########################
     # Document class handling
     def insert_document(self, path, description, vectorized=False) -> dict | None:

@@ -512,3 +512,16 @@ file_cache is only supported with oauth2client<4.0.0
 [2025-10-07 15:21:00 GMT+5:00] | [SYSTEM]: [MAIN] /get_user_info_endpoint called
 [2025-10-07 15:21:01 GMT+5:00] | [SYSTEM]: [DATABASE] User information retrieved.
 [2025-10-07 15:21:01 GMT+5:00] | [SYSTEM]: [MAIN] /get_user_info_endpoint returned - status(200)
+[2025-10-09 11:36:41 GMT+5:00] | [SYSTEM]: [BLOB] Authentication failed. [Errno 2] No such file or directory: './etc/secrets/credentials.json'
+[2025-10-09 11:36:46 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-09 11:36:51 GMT+5:00] | [SYSTEM]: LLM API Connected
+[2025-10-09 11:36:51 GMT+5:00] | [SYSTEM]: Document class Initialized
+[2025-10-09 11:36:55 GMT+5:00] | [SYSTEM]: Connected to PineconeDB
+[2025-10-09 11:36:55 GMT+5:00] | [SYSTEM]: [BLOB] Authentication failed. [Errno 2] No such file or directory: './etc/secrets/credentials.json'
+[2025-10-09 11:39:38 GMT+5:00] | [SYSTEM]: [MAIN] /change_user_role_endpoint called
+[2025-10-09 11:39:39 GMT+5:00] | [SYSTEM]: [DATABASE] User role changed.
+[2025-10-09 11:39:50 GMT+5:00] | [SYSTEM]: [MAIN] /change_user_role_endpoint called
+[2025-10-09 11:39:51 GMT+5:00] | [SYSTEM]: [DATABASE] User role changed.
+[2025-10-09 11:40:27 GMT+5:00] | [SYSTEM]: [MAIN] /change_user_role_endpoint called
+[2025-10-09 11:40:29 GMT+5:00] | [SYSTEM]: [DATABASE] User role changed.
+[2025-10-09 11:40:39 GMT+5:00] | [SYSTEM]: [MAIN] /change_user_role_endpoint called
