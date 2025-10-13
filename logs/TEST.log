@@ -525,3 +525,39 @@ file_cache is only supported with oauth2client<4.0.0
 [2025-10-09 11:40:27 GMT+5:00] | [SYSTEM]: [MAIN] /change_user_role_endpoint called
 [2025-10-09 11:40:29 GMT+5:00] | [SYSTEM]: [DATABASE] User role changed.
 [2025-10-09 11:40:39 GMT+5:00] | [SYSTEM]: [MAIN] /change_user_role_endpoint called
+[2025-10-09 16:26:00 GMT+5:00] | [SYSTEM]: [BLOB] Authentication failed. [Errno 2] No such file or directory: './etc/secrets/credentials.json'
+[2025-10-09 16:26:05 GMT+5:00] | [SYSTEM]: [DATABASE] Connection to DB successful
+[2025-10-09 16:26:06 GMT+5:00] | [SYSTEM]: LLM API Connected
+[2025-10-09 16:26:06 GMT+5:00] | [SYSTEM]: Document class Initialized
+[2025-10-09 16:26:11 GMT+5:00] | [SYSTEM]: Connected to PineconeDB
+[2025-10-09 16:26:11 GMT+5:00] | [SYSTEM]: [BLOB] Authentication failed. [Errno 2] No such file or directory: './etc/secrets/credentials.json'
+[2025-10-09 16:27:15 GMT+5:00] | [SYSTEM]: [MAIN] /chat API Called
+[2025-10-09 16:27:17 GMT+5:00] | [SYSTEM]: [DATABASE] Added hello... to chat: 1
+[2025-10-09 16:27:18 GMT+5:00] | [SYSTEM]: [DATABASE] Chat messages retrieved.
+[2025-10-09 16:27:19 GMT+5:00] | [SYSTEM]: [DATABASE] Retrieved all document descriptions.
+[2025-10-09 16:27:19 GMT+5:00] | --> [RESP:1]: [MAIN] Validator: **Greeting**
+[2025-10-09 16:27:20 GMT+5:00] | [SYSTEM]: [DATABASE] Retrieved all document descriptions.
+[2025-10-09 16:27:20 GMT+5:00] | --> [RESP:1]: Hello there! How can I assist you today?
+[2025-10-09 16:27:22 GMT+5:00] | [SYSTEM]: [DATABASE] Added Hello ther... to chat: 1
+[2025-10-09 16:27:22 GMT+5:00] | [SYSTEM]: [MAIN] /chat API Returned
+[2025-10-09 16:27:42 GMT+5:00] | [SYSTEM]: [MAIN] /chat API Called
+[2025-10-09 16:27:44 GMT+5:00] | [SYSTEM]: [DATABASE] Added can u tell... to chat: 1
+[2025-10-09 16:27:45 GMT+5:00] | [SYSTEM]: [DATABASE] Chat messages retrieved.
+[2025-10-09 16:27:45 GMT+5:00] | [SYSTEM]: [DATABASE] Retrieved all document descriptions.
+[2025-10-09 16:27:46 GMT+5:00] | --> [RESP:1]: [MAIN] Validator: **Valid RAG Question**
+
+This input is a continuation of the previous discussion about REC, and the user is asking for information related to the domain.
+[2025-10-09 16:27:46 GMT+5:00] | [SYSTEM]: [DATABASE] Retrieved all document descriptions.
+[2025-10-09 16:27:47 GMT+5:00] | --> [RESP:1]: Hello there! I'm happy to help you with your question about REC. As we discussed earlier, REC stands for Religious Education Centre, and it's a facility where religious education activities are organized for the community.
+
+Let me provide you with some more information. According to the REC Policy Manual, the main objectives of REC include ensuring uniformity, professionalism, and quality in REC management. The REC setup involves coordination with local boards and community stakeholders.
+
+Here are some key points about REC:
+
+- It operates under a Religious Education Centre Committee (RECC) that manages its activities.
+- The REC Policy Manual provides guidelines to effectively manage REC operations, roles, and responsibilities.
+- In areas with smaller populations, one RECC may oversee multiple RECs, but larger RECs have dedicated RECCs.
+
+Would you like me to explain the roles of the RECC or how an REC is managed?
+[2025-10-09 16:27:49 GMT+5:00] | [SYSTEM]: [DATABASE] Added Hello ther... to chat: 1
+[2025-10-09 16:27:49 GMT+5:00] | [SYSTEM]: [MAIN] /chat API Returned

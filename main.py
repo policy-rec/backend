@@ -439,7 +439,8 @@ async def create_user_endpoint(username: str = Form(...), password: str = Form(.
             return JSONResponse(
                 status_code=200,
                 content={
-                    "message": f"User: {username} created successfully."
+                    "message": f"User: {username} created successfully.",
+                    "user": user
                 }
             )
         else:
@@ -474,7 +475,8 @@ async def create_chat_endpoint(userID: int = Form(...), chat_name: Optional[str]
             return JSONResponse(
                 status_code=200,
                 content={
-                    "message": "Chat created successfully."
+                    "message": "Chat created successfully.",
+                    "chat": chat
                 }
             )
         else:

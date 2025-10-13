@@ -5,6 +5,7 @@ from logger import Logger
 import base64
 import json
 import os
+from groq import Groq
 
 load_dotenv()
 log = Logger()
@@ -13,7 +14,8 @@ IMAGE_FOLDER = os.environ.get("IMAGE_FOLDER")
 class LLM:
     def __init__(self) -> None:
         try:
-            self.client = OpenAI(api_key=os.environ.get("LLM_API_KEY"))
+            # self.client = OpenAI(api_key=os.environ.get("LLM_API_KEY"))
+            self.client = Groq(api_key=os.environ.get("LLM_API_KEY"))
             self.client.models.list()
             log.log_event("SYSTEM", "LLM API Connected")
         except AuthenticationError as e:
@@ -155,10 +157,14 @@ class LLM:
         - The entire summary should only be the GIST of the entire document, to only provide context of the document to a LLM.
         """
 
-        self.model_v = "gpt-4.1-mini-2025-04-14"
-        self.model_r = "gpt-4.1-mini-2025-04-14"
-        self.model_i = "gpt-4o"
-        self.model_s = "gpt-4o"
+        # self.model_v = "gpt-4.1-mini-2025-04-14"
+        self.model_v = "llama-3.1-8b-instant"
+        # self.model_r = "gpt-4.1-mini-2025-04-14"
+        self.model_r = "llama-3.1-8b-instant"
+        # self.model_i = "gpt-4o"
+        self.model_i = "llama-3.1-8b-instant"
+        # self.model_s = "gpt-4o"
+        self.model_s = "llama-3.1-8b-instant"
         
         self.temperature_v = 0.3
         self.temperature_r = 0.4
